@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script
+            defer="defer"
+            src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"
+            integrity="sha384-vuFJ2JiSdUpXLKGK+tDteQZBqNlMwAjhZ3TvPaDfN9QmbPb7Q8qUpbSNapQev3YF"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <style>
+            .weather {
+                width: 300px;
+                height: 150px;
+                text-align: center;
+                background-color: cornflowerblue;
+                color: #fff;
+            }
+            .weather > div {
+                float: left;
+                height: 75px;
+                line-height: 75px;
+                width: 50%;
+            }
+            .weather > div.currIcon,
+            .weather > div.currTemp {
+                font-size: 50px;
+            }
+            .weather > div.city {
+                width: 100%;
+                font-size: 23px;
+            }
+        </style>
+        <script>
+            $(function () {
+                let weatherIcons = {
+                    '01d': 'fas fa-sun', // 맑음 (낮)
+                    '01n': 'fas fa-moon', // 맑음 (밤)
+                    '02d': 'fas fa-cloud-sun', // 약간 흐림 (낮)
+                    '02n': 'fas fa-cloud-moon', // 약간 흐림 (밤)
+                    '03d': 'fas fa-cloud', // 흐림
+                    '04d': 'fas fa-cloud-meatball', // 구름 많음
+                    '09d': 'fas fa-cloud-showers-heavy', // 소나기
+                    '10d': 'fas fa-cloud-rain', // 비
+                    '11d': 'fas fa-poo-storm', // 천둥번개
+                    '13d': 'fas fa-snowflake', // 눈
+                    '50d': 'fas fa-smog', // 안개
+                }
+
+                var apiURI = "http://api.openweathermap.org/data/2.5/weather?id=1838524&appid=06bfd308b7a0a8" +
+                        "b05cd9c4a8820dfe9e&units=metric";
+
+                $.ajax({
+                    url: apiURI, dataType: "json", type: "GET", async: false, // async 오타 수정
+                    success: function (data) {
+                        var $Icon = (data.weather[0].icon).substr(0, 2);
+                        var $Temp = Math.floor(data.main.temp) + '˚';
+                        var $city = data.name;
+
+                        $('.currIcon').append(`<i class="${weatherIcons[$Icon]}"></i>`); // 아이콘 매핑 정상 동작
+                        $('.currTemp').prepend($Temp);
+                        $('.city').append($city);
+                    }
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+        <div class="wether">
+            <div class="currIcon"></div>
+            <div class="currTemp"></div>
+            <div class="city">도시</div>
+            <i class="fas fa-cloud"></i>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>베스킨 메뉴</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #252422;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 395px;
+            height: 160px;
+            overflow: hidden;
+        }
+        dl {
+            width: 395px;
+            height: 160px;
+            display: flex;
+        }
+        dt {
+            width: 25px;
+            height: 160px;
+            background: url('blue01.png') no-repeat center center;
+            cursor: pointer;
+        }
+        dt span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-indent: -9999px;
+        }
+        dt:hover {
+            background: url('pink01.png') no-repeat center center;
+        }
+        dt span.selected {
+            background: url('orange01.png') no-repeat center center;
+            cursor: default;
+        }
+        dd {
+            width: 0px;
+            height: 160px;
+            background: #d4d0c8;
+            overflow: hidden;
+            transition: width 0.3s ease-in-out;
+        }
+        dd img {
+            width: 320px;
+            height: 160px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <dl>
+            <dt><span>Step 1</span></dt>
+            <dd><img src="menuimg01.jpg" alt="메뉴 1"></dd>
+            <dt><span>Step 2</span></dt>
+            <dd><img src="menuimg02.jpg" alt="메뉴 2"></dd>
+            <dt><span class="selected">Step 3</span></dt>
+            <dd style="width: 320px;"><img src="menuimg03.jpg" alt="메뉴 3"></dd>
+        </dl>
+    </div>
+
+    <script>
+        $(function () {
+            $("dd:not(:last)").css("width", "0px"); // 첫 번째 dd만 기본으로 열림
+            $("dt").click(function () {
+                var nextDD = $(this).next("dd");
+                $("dd").css("width", "0px"); // 모든 dd 닫기
+                nextDD.css("width", "320px"); // 클릭한 dt의 dd 열기
+                nextDD.css("transition", "width 0.3s ease-in-out"); // 자연스러운 전환 효과 추가
+
+                $("dt span").removeClass("selected");
+                $(this).find("span").addClass("selected");
+            });
+        });
+    </script>
+</body>
+</html>

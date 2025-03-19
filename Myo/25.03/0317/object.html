@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 자바 스크립트 객체
+        // 자바 스크립트 객체 "키-값(속성)"의 쌍으로 이루어진 데이터 구조
+        const person = {
+            name : "Alice",
+            age : 25,
+            isStudent : false,
+            greet : function(){
+                document.write("Hello, my name is " + this.name + "<br/>");
+            },
+
+        };
+        document.write(person.name+"<br/>");
+        document.write(person.["age"]+"<br/>");
+        person.greet();
+
+        // {
+        //     "name": "Alice",
+        //     "age": 25,
+        //     "isStudent": false
+        // }
+
+    </script>
+</body>
+</html>

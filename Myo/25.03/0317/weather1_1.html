@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+    $.getJSON("http://api.openweathermap.org/data/2.5/forecast?id=1835848&appid=06bfd308b7a0a8b05cd9c4a8820dfe9e", function(data){
+        // alert(data.cod)
+        // alert(data.city.name);
+        // alert(data.list[0].main.temp)
+        
+
+    });
+    </script>
+</head>
+<body>
+    <h1>weather API</h1>
+    <h2> - 날씨예보 </h2>
+    <div class="ctemp">현재 온도</div>
+    <div class="clowtepm">최저 온도</div>
+    <div class="chightemp">최고 온도</div>
+    <div class="cicon">아이콘</div>
+</body>
+</html>

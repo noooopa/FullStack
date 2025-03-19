@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <style>
+        *{ 
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #252422;
+        }
+        div{
+            margin: 50px auto;
+            width: 800px;
+            height: 300px;
+        }
+        dl{
+            width: 800px;
+            height: 300px;
+        }
+        dt{
+            width: 35px;
+            height: 300px;
+            float: left;
+        }
+        dt span{
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-indent: -9999px;
+        }
+        dd{
+            width: 695px;
+            height: 300px;
+            float: left;
+            background-color: #d4d0c8;
+            overflow: hidden;
+        }
+        dd p{
+            width: 655px;
+            padding: 20px;
+            text-indent: 20px;
+        }
+        /* 기본 배경사진 */
+        dt#step1 span{
+            background: url(background-1.jpg) no-repeat 50% 50%;
+        }
+        dt#step2 span{
+            background: url(background-2.jpg) no-repeat 50% 50%;
+        }
+        dt#step3 span{
+            background: url(background-3.jpg) no-repeat 50% 50%;
+        }
+        dt#step1 span{
+            background: url(background-1-selected.jpg) no-repeat 50% 50%;
+        }
+        dt#step2 span{
+            background: url(background-2-selected.jpg) no-repeat 50% 50%;
+        }
+        dt#step3 span{
+            background: url(background-3-selected.jpg) no-repeat 50% 50%;
+        }
+
+    </style>
+    <script>
+        $(function(){
+            $('dd').css('width',"0px");
+            $('dd').eq(0).css('Width', '695px');
+        });
+
+    </script>
+</head>
+<body>
+    <div>
+        <dl>
+            <dt id="step1"><span>짜장면</span></dt>
+            <dd>
+                <p><br>1. 짜장면의 역사와 기원
+                    짜장면은 한국식 중화요리 중 가장 대표적인 음식으로, 중국 산둥 지역의 '자장몐(炸酱面)'에서 유래함.
+                    1905년, 인천 차이나타운의 산둥 출신 화교들이 판매한 음식에서 시작됨.
+                    한국에서 고유의 변형을 거쳐 오늘날의 짜장면이 탄생함.<br>
+                    2. 짜장면의 조리법
+                    기본 재료: 춘장, 양파, 돼지고기, 감자, 호박, 녹말물, 설탕, 소금, 간장.
+                    면은 밀가루 반죽을 사용하며, 기계식 면 뽑기로 쫄깃한 식감을 냄.
+                    춘장을 기름에 볶아 사용하며, 설탕을 첨가하여 단맛을 강화하는 것이 특징.<br>
+                    3. 짜장면의 종류
+                    간짜장: 춘장과 재료를 볶아 면 위에 올리는 방식.
+                    삼선짜장: 해산물(새우, 오징어 등)이 들어간 짜장면.
+                    유니짜장: 돼지고기를 다져서 만든 짜장면.
+                    사천짜장: 매운 맛이 강한 짜장면.<br>
+                    4. 짜장면과 한국 문화
+                    졸업식이나 이사날에 먹는 음식으로 정착.
+                    배달 문화와 함께 발전하여 한국인의 소울푸드가 됨.
+                </p>
+            </dd>
+            <dt id="step2"><span>탕수육</span></dt>
+            <dd>
+                <p><br>1. 탕수육의 역사와 기원
+                    중국의 '탕추러우(糖醋肉)'에서 유래됨.
+                    한국에서는 중국집 메뉴로 자리 잡으며 돼지고기를 튀긴 후 새콤달콤한 소스를 뿌려 먹는 형태로 발전.<br>
+                    2. 탕수육의 조리법
+                    돼지고기를 적당한 크기로 자르고, 전분 옷을 입혀 튀김.
+                    탕수육 소스는 식초, 설탕, 간장, 물을 베이스로 만듦.<br>
+                    3. 탕수육의 논쟁 (찍먹 vs 부먹)
+                    찍먹(찍어 먹기): 튀김의 바삭함을 유지하려는 방식.
+                    부먹(부어 먹기): 소스가 배어든 부드러운 식감을 선호하는 방식.
+                    지역 및 개인 취향에 따라 선호 방식이 다름.<br>
+                    4. 다양한 탕수육 변형
+                    꿔바로우: 중국식 찹쌀 탕수육.
+                    찹쌀탕수육: 찹쌀을 활용하여 더 쫀득한 식감을 살린 한국식 탕수육.</p>
+            </dd>
+            <dt id="step3"><span>군만두</span></dt>
+            <dd>
+                <p><br>1. 군만두의 역사와 기원
+                    원래 중국에서 '궈티에(锅贴)'라고 불리며, 만두를 기름에 구워 만든 음식.
+                    한국에서는 중국집과 분식점에서 사이드 메뉴로 자리 잡음.<br>
+                    2. 군만두의 조리법
+                    만두피 안에 돼지고기, 부추, 양배추 등을 넣고 속을 채움.
+                    프라이팬에서 바삭하게 굽거나 튀기는 방식으로 조리.<br>
+                    3. 다양한 군만두 스타일
+                    일반 군만두: 바삭하게 튀겨내는 방식.
+                    찹쌀 군만두: 찹쌀을 사용하여 쫀득한 식감을 더한 만두.
+                    찐만두와의 차이: 찐만두는 수분이 많아 촉촉한 식감이 특징이며, 군만두는 바삭한 식감이 특징.<br>
+                    4. 군만두와 곁들이는 소스
+                    간장과 식초를 섞은 전통적인 소스.
+                    고추기름을 추가하여 매콤한 맛을 더하는 방법.</p>
+            </dd>
+        </dl>
+    </div>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SUBWAY 써브웨이</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<!-- ================================================== popup ========================= -->
+	<div id="notice_wrap">
+		<img src="images/popup.jpg" alt="공지"/>
+		<p class="closeWrap">
+			<input type="checkbox" name="expiresChk" id="expiresChk">
+			<label for="expiresChk">일주일동안 그만 보기</label>
+			<button class="closeBtn">닫기</button>
+		</p>
+	</div>
+    <!-- ================================================== popup ========================= -->
+	
+	<!-- ================================================== header ========================= -->
+	<header>
+		<div id="h_top">
+			<a href="#" class="logo"><img src="images/logo_w.png" alt="로고"></a>
+			<ul>
+				<li><a href="#">로그인</a></li>
+				<li><p href="#" class="dot">·</p></li>
+				<li><a href="#">회원가입</a></li>
+				<li><a href="#" class="earth"></a></li>
+			</ul>
+		</div>
+
+		<nav>
+			<ul>
+				<li><a href="#">메뉴소개</a>
+					<ul>
+						<li><a href="#">샌드위치</a></li>
+						<li><a href="#">랩 · 기타</a></li>
+						<li><a href="#">샐러드</a></li>
+						<li><a href="#">아침메뉴</a></li>
+						<li><a href="#">스마일 썹</a></li>
+						<li><a href="#">단체메뉴</a></li>
+					</ul>
+				</li>
+				<li><a href="#">이용방법</a>
+					<ul>
+						<li><a href="#">써브웨이 이용방법</a></li>
+						<li><a href="#">단체메뉴 이용방법</a></li>
+						<li><a href="#">신선한 재료 소개</a></li>
+						<li><a href="#">App 이용방법</a></li>
+					</ul>
+				</li>
+				<li><a href="#">새소식</a>
+					<ul>
+						<li><a href="#">이벤트·프로모션</a></li>
+						<li><a href="#">뉴스·공지사항</a></li>
+						<li><a href="#">광고영상</a></li>
+					</ul>
+				</li>
+				<li><a href="#">써브웨이</a>
+					<ul>
+						<li><a href="#">써브웨이 역사</a></li>
+						<li><a href="#">써브웨이 약속</a></li>
+						<li><a href="#">샌드위치 아티스트 지원</a></li>
+						<li><a href="#">매장찾기</a></li>
+					</ul>
+				</li>
+				<li><a href="#">가맹점</a>				
+					<ul>
+						<li><a href="#">써브웨이 프랜차이즈</a></li>
+						<li><a href="#">가맹관련 FAQ</a></li>
+						<li><a href="#">가맹신청·문의</a></li>
+						<li><a href="#">지사안내</a></li>
+						<li><a href="#">사업설명회</a></li>
+					</ul>
+				</li>
+				<li><a href="#">온라인 주문</a>				
+					<ul>
+						<li><a href="#">FAST-SUB</a></li>
+						<li><a href="#">HOME-SUB</a></li>
+						<li><a href="#">단체주문</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="shadow"></div>
+		</nav>
+	</header>
+	<!-- ================================================== header ========================= -->
+
+	<!-- ================================================== section01 slide ========================= -->
+	<section id="section01">
+		<div class="slide">
+			<div class="sg">
+				<a class="i_01" href="#" style="left: 0px;"></a>
+				<a class="i_02" href="#" style="left: -100%;"></a>
+				<a class="i_03" href="#" style="left: -100%;"></a>
+				<a class="i_04" href="#" style="left: -100%;"></a>
+				<a class="i_05" href="#" style="left: -100%;"></a>
+			</div>
+
+			<div class="dot cf">
+				<a href="#" class="on"></a>
+				<a href="#" class=""></a>
+				<a href="#" class=""></a>
+				<a href="#" class=""></a>
+				<a href="#" class=""></a>
+			</div>
+		</div>
+	</section>
+	<!-- ================================================== section01 slide ========================= -->
+	
+	<!-- ================================================== sub ========================= -->
+	<div id="sub">
+		<div class="sub_wrap">
+			<a class="sw_left" href="#"><p>매장찾기</p></a>
+			<a class="sw_right" href="#"><p>가맹신청·문의</p></a>
+		</div>
+	</div>
+	<!-- ================================================== sub ========================= -->
+	
+	<!-- ================================================== section02 ========================= -->
+	<section id="section02">
+		<div class="s02_wrap">
+			<div class="menu_top cf">
+				<h3>Subway's Menu</h3>
+				<ul class="mt_right">
+					<li class="on"><a href="#">클래식</a></li>
+					<li><a href="#">프레쉬&amp;라이트</a></li>
+					<li><a href="#">프리미엄</a></li>
+					<li class="last"><a href="#">아침메뉴</a></li>
+				</ul>
+			</div>
+			<div class="menu_wrap">
+
+				<div class="menu" style="display: block;">
+					<ul class="cf">
+						<li style="margin-left: 40px; width: 260px;"><a href="#">
+							<div><img src="images/sandwich_cl06.jpg" alt="에그마요"></div>
+							<strong>에그마요</strong>
+							<p>부드러운 달걀과 고소한 마요네즈가 만나<br>
+								더 부드러운 스테디셀러</p>
+						</a></li>
+						<li style="margin-left: 40px; width: 260px;"><a href="#">
+							<div><img src="images/sandwich_cl01.jpg" alt="이탈리안 비엠티"></div>
+							<strong>이탈리안 비엠티</strong>
+							<p>페퍼로니,살라미 그리고 햄이 만들어내는 최상의<br>
+								조화! 전세계가 사랑하는 써브웨이의 베스트셀러!<br>
+								Biggest Meatiest Tastiest, It's B.M.T.!</p>
+						</a></li>
+						<li style="margin-left: 40px; width: 260px;"><a href="#">
+							<div><img src="images/sandwich_cl02.jpg" alt="비엘티"></div>
+							<strong>비엘티</strong>
+							<p>오리지널 아메리칸 베이컨의<br>
+								풍미와 바삭함 그대로</p>
+						</a></li>
+						<li style="margin-left: 40px; width: 260px;"><a href="#">
+							<div><img src="images/sandwich_cl04.jpg" alt="햄"></div>
+							<strong>햄</strong>
+							<p>기본 중에 기본!<br>
+								풍부한 햄이 만들어내는<br>
+								입 안 가득 넘치는 맛의 향연</p>
+						</a></li>
+						<li style="margin-left: 40px; width: 260px;"><a href="#">
+							<div><img src="images/sandwich_cl05.jpg" alt="참치"></div>
+							<strong>참치</strong>
+							<p>남녀노소 누구나 좋아하는<br>
+								담백한 참치와 고소한 마요네즈의<br>
+								완벽한 조화</p>
+						</a></li>
+					</ul>
+				</div>
+
+				<div class="menu" style="display: none;">
+					<ul class="cf">
+						<li style="margin-left: 40px; width: 260px;"><a href="#">
+							<div><img src="images/sandwich_fl01.jpg" alt="로티세리 바비큐 치킨"></div>
+							<strong>로티세리 바비큐 치킨</strong>
+							<p>촉촉한 바비큐 치킨의 풍미가득.<br>
+								손으로 찢어 더욱 부드러운 치킨의 혁명</p>
+						</a></li>
+						<li style="margin-left: 40px; width: 260px;"><a href="#">
+							<div><img src="images/sandwich_fl02.jpg" alt="로스트 치킨"></div>
+							<strong>로스트 치킨</strong>
+							<p>오븐에 구워 담백한 저칼로리<br>
+								닭가슴살의 건강한 풍미</p>
+						</a></li>
+						<li style="margin-left: 40px; width: 260px;"><a href="#">
+							<div><img src="images/sandwich_fl04.jpg" alt="써브웨이 클럽"></div>
+							<strong>써브웨이 클럽</strong>
+							<p>명실공히 시그니처 써브!<br>
+								치킨슬라이스, 햄, 베이컨의 완벽한 앙상블</p>
+						</a></li>
+						<li style="margin-left: 40px; width: 260px;"><a href="#">
+							<div><img src="images/sandwich_fl06.jpg" alt="베지"></div>
+							<strong>베지</strong>
+							<p>갓 구운 빵과 신선한 7가지 야채로<br>
+								즐기는 깔끔한 한끼</p>
+						</a></li>
+					</ul>
+				</div>
+
+				<div class="menu" style="display: none;">
+					<ul class="cf">
+						<li style="margin-left: 40px; width: 260px;"><a href="#">
+							<div><img src="images/sandwich_pm10.jpg" alt="쉬림프"></div>
+							<strong>쉬림프</strong>
+							<p>탱클한 식감이 그대로 살아있는 통새우가<br>
+								5마리 들어가 한 입 베어 먹을 때 마다<br>
+								진짜 새우의 풍미가 가득</p>
+						</a></li>
+						<li style="margin-left: 40px; width: 260px;"><a href="#">
+							<div><img src="images/sandwich_pm08.jpg" alt="풀드포크"></div>
+							<strong>풀드포크 바비큐</strong>
+							<p>훈연한 미국 정통 스타일의 리얼 바비큐 풀드포크가<br>
+								들어간 샌드위치</p>
+						</a></li>
+						<li style="margin-left: 40px; width: 260px;"><a href="#">
+							<div><img src="images/sandwich_pm01.jpg" alt="스테이크&amp;치즈"></div>
+							<strong>스테이크&amp;치즈</strong>
+							<p>육즙이 쫙~<br>
+								풍부한 비프 스테이크의 풍미가 입안 한가득</p>
+						</a></li>
+						<li style="margin-left: 40px; width: 260px;"><a href="#">
+							<div><img src="images/sandwich_pm06.jpg" alt="스파이시 이탈리안"></div>
+							<strong>스파이시 이탈리안</strong>
+							<p>살라미, 페퍼로니가 입안 한가득!<br>
+								쏘 핫한 이탈리아의 맛</p>
+						</a></li>
+						<li style="margin-left: 40px; width: 260px;"><a href="#">
+							<div><img src="images/sandwich_pm07.jpg" alt="치킨 데리야끼"></div>
+							<strong>치킨 데리야끼</strong>
+							<p>담백한 치킨 스트립에 달콤짭쪼름한 써브웨이<br>
+								특제 데리야끼 소스와의 환상적인 만남</p>
+						</a></li>
+					</ul>
+				</div>
+
+				<div class="menu " style="display: none;">
+					<ul class="cf">
+						<li style="margin-left: 40px; width: 260px;"><a href="#">
+							<div><img src="images/sandwich_bf01.jpg" alt="블랙 포레스트햄 &amp; 에그, 치즈"></div>
+							<strong>햄 &amp; 에그, 치즈</strong>
+							<p>푹신한 오믈렛과 햄의 가장 클래식한 조화</p>
+						</a></li>
+						<li style="margin-left: 40px; width: 260px;"><a href="#">
+							<div><img src="images/sandwich_bf02.jpg" alt="웨이턴, 에그 &amp; 치즈"></div>
+							<strong>웨이턴, 에그 &amp; 치즈</strong>
+							<p>토마토, 피망, 양파 세가지 야채가 더해져<br>
+								더욱 신선한 하루의 시작</p>
+						</a></li>
+					</ul>
+				</div>
+
+			</div>
+			<a href="#" class="prev">prev</a>
+			<a href="#" class="next">next</a>
+		</div>
+	</section>
+	<!-- ================================================== section02 ========================= -->
+
+	<!-- ================================================== section03 slide_2 ========================= -->
+	<section id="section03">
+		<div class="s03_wrap">
+
+			<div class="content con_top">
+				<div class="cont_01">
+					<h3>서브웨이를<br>
+					제대로 즐기는 방법!</h3>
+					<a href="#" class="con_a1">이용방법</a>
+				</div>
+				<div class="cont_02">
+					<h3>50년 역사를 가진<br>
+					No.1 프랜차이즈의 성장기</h3>
+					<a href="#" class="con_a2">서브웨이 역사</a>
+				</div>
+			</div>
+			<div class="content con_bott">
+				<div class="cont_03">
+					<div class="new">
+						<h2>What's New</h2>
+						<p>써브웨이의 다양한 소식을<br>
+						빠르게 전달해드립니다.</p>
+					</div>
+					<ul>
+						<li><a href="#">써브웨이와 함께하는 JTBC토일드라마 '협상의기술'</a></li>
+						<li><a href="#">미사용 모바일 상품권 재발급 안내</a></li>
+						<li><a href="#">2025 설 연휴 매장운영 안내</a></li>
+						<li class="more"><a href="#">more</a></li>
+					</ul>
+				</div>
+				<div class="cont_04">
+					<div class="slide_2">
+						<div class="sg_2">
+							<a class="i_01" href="#" style="left: 0px;"></a>
+							<a class="i_02" href="#" style="left: -100%;"></a>
+							<a class="i_03" href="#" style="left: -100%;"></a>
+							<a class="i_04" href="#" style="left: -100%;"></a>
+							<a class="i_05" href="#" style="left: -100%;"></a>
+							<a class="i_06" href="#" style="left: -100%;"></a>
+						</div>
+						<div class="dot_2 cf_2">
+							<a href="#" class="on"></a>
+							<a href="#" class=""></a>
+							<a href="#" class=""></a>
+							<a href="#" class=""></a>
+							<a href="#" class=""></a>
+							<a href="#" class=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ================================================== section03 slide_2 ========================= -->
+
+	<!-- ================================================== section04 ========================= -->
+	<section id="section04">
+		<ul class="cf">
+			<li><a href="#">
+				<div class="icon1"></div>
+				<p class="tit">프렌차이즈</p>
+				<p class="txt">개설절차/투자비용 정보</p>
+			</a></li>
+			<li><a href="#">
+				<div class="icon2"></div>
+				<p class="tit">자사안내</p>
+				<p class="txt">수도권/지방 지사정보</p>
+			</a></li>
+			<li><a href="#">
+				<div class="icon3"></div>
+				<p class="tit">광고영상</p>
+				<p class="txt">TV광고/동영상</p>
+			</a></li>
+			<li><a href="#">
+				<div class="icon4"></div>
+				<p class="tit">1:1문의</p>
+				<p class="txt">자주하는 질문/1:1문의</p>
+			</a></li>
+		</ul>
+	</section>
+	<!-- ================================================== section04 ========================= -->
+
+	<!-- ================================================== footer ========================= -->
+	<footer>
+		<ul class="footer_wrap cf">
+			<li><a href="#">이용약관</a></li>	
+			<li><a href="#" class="sp">개인정보처리방침</a></li>	
+			<li><a href="#">써브카드</a></li>	
+			<li><a href="#">점주관리자</a></li>	
+		</ul>
+		<div class="copyright">
+			<ul>
+				<li>경기도 시흥시 서울대학로264번길 50</li>
+				<li>대표: HYOYOUNG KIM(효영 김)</li>
+				<li>전화 : 010-9553-6280</li>
+				<li>사업자등록번호 : 15-72007145</li>
+			</ul>
+			<p>Subwow® is a Registered Trademark of Subway IP LLC. © 2025 Subwow. All Rights Reserved.</p>
+			<div class="instar"></div>
+			<div class="facebook"></div>
+		</div>
+	</footer>
+	<!-- ================================================== footer ========================= -->
+</body>
+</html>

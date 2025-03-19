@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../0305/js/jquery-3.7.1.min.js"></script>
+</head>
+<style>
+    *{margin: 0; padding: 0;}
+    #wrap{width: 300px; margin: 0 auto}
+    ul{list-style: none;}
+    .tab{
+        display: flex;
+        justify-content:space-around;
+        margin: 10px 0;
+    }
+    .tab li{padding: 5px;
+        text-align: center;
+        border: 1px solid #000;
+        cursor: pointer;
+    }
+    .tab li.on{
+        background-color: red;
+    }
+    .list{width: 300px;
+        height: 200px;
+        border: 1px solid #000;
+        background-color: tan;
+    }
+    .list li{display: none;}
+    .list li.active{display: block;}
+</style>
+<body>
+    <div id="wrap">
+        <ul class="tab">
+            <li>tab1</li>
+            <li>tab2</li>
+            <li>tab3</li>
+            <li>tab4</li>
+        </ul>
+        <ul class="list">
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li>list4</li>
+        </ul>
+    </div>
+    <script>
+        $(function(){
+            $('.tab li').click(function(){
+                var idx = $(this).index();
+                $('.tab li').removeClass('on');
+                $('.tab li').eq(idx).addClass('on');
+                $('.list li').removeClass('active');
+                $('.list li').eq(idx).addClass('active');
+            })
+        })
+    </script>
+</body>
+</html>

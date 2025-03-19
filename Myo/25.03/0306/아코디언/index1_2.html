@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모노톤 아코디언 메뉴</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #1c1c1c; /* 다크 그레이 배경 */
+            color: #fff;
+        }
+        dl {
+            width: 800px;
+            margin: 50px auto 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        dt {
+            line-height: 35px;
+            font-size: 20px;
+            text-indent: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            background: #333; /* 기본 배경 */
+            color: #ddd;
+            transition: background 0.3s, color 0.3s;
+            padding: 10px;
+            border-bottom: 1px solid #444;
+        }
+        dt:hover {
+            background: #444; /* 호버 시 더 밝은 그레이 */
+            color: #fff;
+        }
+        dt.active {
+            background: #e69501f5; /* 클릭한 상태 */
+            color: #fff;
+        }
+        dd {
+            display: none;
+            padding: 15px;
+            background-color: #2b2b2b; /* 중간톤 그레이 */
+            color: #bbb;
+            border-bottom: 1px solid #444;
+        }
+        dd p {
+            margin: 0;
+            text-indent: 1em;
+            padding: 10px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>짜장면</dt>
+        <dd>
+            <p><br>1. 짜장면의 역사와 기원
+                짜장면은 한국식 중화요리 중 가장 대표적인 음식으로, 중국 산둥 지역의 '자장몐(炸酱面)'에서 유래함.
+                1905년, 인천 차이나타운의 산둥 출신 화교들이 판매한 음식에서 시작됨.
+                한국에서 고유의 변형을 거쳐 오늘날의 짜장면이 탄생함.<br>
+                2. 짜장면의 조리법
+                기본 재료: 춘장, 양파, 돼지고기, 감자, 호박, 녹말물, 설탕, 소금, 간장.
+                면은 밀가루 반죽을 사용하며, 기계식 면 뽑기로 쫄깃한 식감을 냄.
+                춘장을 기름에 볶아 사용하며, 설탕을 첨가하여 단맛을 강화하는 것이 특징.<br>
+                3. 짜장면의 종류
+                간짜장: 춘장과 재료를 볶아 면 위에 올리는 방식.
+                삼선짜장: 해산물(새우, 오징어 등)이 들어간 짜장면.
+                유니짜장: 돼지고기를 다져서 만든 짜장면.
+                사천짜장: 매운 맛이 강한 짜장면.<br>
+                4. 짜장면과 한국 문화
+                졸업식이나 이사날에 먹는 음식으로 정착.
+                배달 문화와 함께 발전하여 한국인의 소울푸드가 됨.</p>
+        </dd>
+
+        <dt>탕수육</dt>
+        <dd>
+            <p><br>1. 탕수육의 역사와 기원
+                중국의 '탕추러우(糖醋肉)'에서 유래됨.
+                한국에서는 중국집 메뉴로 자리 잡으며 돼지고기를 튀긴 후 새콤달콤한 소스를 뿌려 먹는 형태로 발전.<br>
+                2. 탕수육의 조리법
+                돼지고기를 적당한 크기로 자르고, 전분 옷을 입혀 튀김.
+                탕수육 소스는 식초, 설탕, 간장, 물을 베이스로 만듦.<br>
+                3. 탕수육의 논쟁 (찍먹 vs 부먹)
+                찍먹(찍어 먹기): 튀김의 바삭함을 유지하려는 방식.
+                부먹(부어 먹기): 소스가 배어든 부드러운 식감을 선호하는 방식.
+                지역 및 개인 취향에 따라 선호 방식이 다름.<br>
+                4. 다양한 탕수육 변형
+                꿔바로우: 중국식 찹쌀 탕수육.
+                찹쌀탕수육: 찹쌀을 활용하여 더 쫀득한 식감을 살린 한국식 탕수육.
+            </p>
+        </dd>
+
+        <dt>군만두</dt>
+        <dd>
+            <p><br>1. 군만두의 역사와 기원
+                원래 중국에서 '궈티에(锅贴)'라고 불리며, 만두를 기름에 구워 만든 음식.
+                한국에서는 중국집과 분식점에서 사이드 메뉴로 자리 잡음.<br>
+                2. 군만두의 조리법
+                만두피 안에 돼지고기, 부추, 양배추 등을 넣고 속을 채움.
+                프라이팬에서 바삭하게 굽거나 튀기는 방식으로 조리.<br>
+                3. 다양한 군만두 스타일
+                일반 군만두: 바삭하게 튀겨내는 방식.
+                찹쌀 군만두: 찹쌀을 사용하여 쫀득한 식감을 더한 만두.
+                찐만두와의 차이: 찐만두는 수분이 많아 촉촉한 식감이 특징이며, 군만두는 바삭한 식감이 특징.<br>
+                4. 군만두와 곁들이는 소스
+                간장과 식초를 섞은 전통적인 소스.
+                고추기름을 추가하여 매콤한 맛을 더하는 방법.
+            </p>
+        </dd>
+    </dl>
+    <script>
+        $(function(){
+            $("dd").hide(); // 1️⃣ 모든 <dd> 숨기기
+            $("dd").eq(0).show(); // 첫 번째 <dd>만 보이게 설정
+            $("dt").eq(0).addClass("active"); // 첫 번째 <dt> 기본 활성화 스타일 추가
+
+            $("dt").click(function(){ // 2️⃣ <dt> 클릭 이벤트
+                var nextDD = $(this).next("dd"); // 3️⃣ 클릭한 <dt>의 다음 <dd> 가져오기
+                
+                if(nextDD.css("display") == "none") { // 3️⃣ 현재 숨겨져 있는지 확인
+                    $("dd").slideUp(); // 4️⃣ 모든 <dd> 닫기
+                    nextDD.slideDown(); // 5️⃣ 클릭한 <dt> 다음 <dd> 열기
+
+                    $("dt").removeClass("active"); // 6️⃣ 모든 <dt>에서 active 제거
+                    $(this).addClass("active"); // 7️⃣ 클릭한 <dt>에만 active 추가
+                }
+            });
+
+            // 8️⃣ 호버 시 배경색 변경 (클릭된 상태와 충돌 방지)
+            $("dt").hover(
+                function() {
+                    if (!$(this).hasClass("active")) { // 클릭된 요소는 색 변경 안 하도록
+                        $(this).css("background", "#444");
+                    }
+                }, 
+                function() {
+                    if (!$(this).hasClass("active")) { // 클릭된 요소가 아니면 원래 색으로 복귀
+                        $(this).css("background", "#333");
+                    }
+                }
+            );
+        });
+    </script>
+</body>
+</html>

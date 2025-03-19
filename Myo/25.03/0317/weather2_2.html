@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Busan</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <style>
+        /* 모노톤 스타일 */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #222;
+        }
+        h2 {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .weather-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .weather-item {
+            font-size: 16px;
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .weather-item:last-child {
+            border-bottom: none;
+        }
+        .weather-icon-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .weather-icon img {
+            width: 80px;
+            margin-bottom: 5px;
+        }
+        .weather-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #444;
+        }
+    </style>
+    <script>
+    $(document).ready(function(){
+        $.getJSON("http://api.openweathermap.org/data/2.5/weather?id=1838524&appid=06bfd308b7a0a8b05cd9c4a8820dfe9e&units=metric", function(data) {
+            console.log(data); // 콘솔에서 데이터 확인 가능
+
+            // 도시 정보
+            let city = data.name; // 도시 이름
+            let country = data.sys.country; // 국가 코드
+
+            // 현재 날씨 정보
+            let temp = data.main.temp; // 현재 온도
+            let tempMin = data.main.temp_min; // 최저 온도
+            let tempMax = data.main.temp_max; // 최고 온도
+            let humidity = data.main.humidity; // 습도
+            let pressure = data.main.pressure; // 기압
+            let windSpeed = data.wind.speed; // 풍속 (m/s)
+            let windDeg = data.wind.deg; // 풍향 (각도)
+            let clouds = data.clouds.all; // 구름 양 (%)
+
+            // 날씨 상태
+            let weatherMain = data.weather[0].main; // 날씨 상태 (예: Clear, Rain)
+            let weatherDesc = data.weather[0].description; // 상세 설명
+            let iconCode = data.weather[0].icon; // 아이콘 코드
+            
+            // 공식 Weather Conditions 아이콘 URL 사용
+            let iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+            // 현재 날짜 및 시간 출력
+            let now = new Date();
+            let formattedDate = now.getFullYear() + "/" + (now.getMonth()+1) + "/" + now.getDate() + 
+                                " " + now.getHours() + ":" + (now.getMinutes()<10 ? '0' : '') + now.getMinutes();
+            
+            // HTML 업데이트
+            $("h2").html(`📅 ${formattedDate} - 실시간 날씨`);
+            $(".city-name").html("📍 " + city + " (" + country + ")");
+            $(".temp").html("🌡️ 현재 온도: " + temp + "°C");
+            $(".temp-range").html("🔽 최저 온도: " + tempMin + "°C | 🔼 최고 온도: " + tempMax + "°C");
+            $(".humidity").html("💧 습도: " + humidity + "%");
+            $(".pressure").html("🎈 기압: " + pressure + " hPa");
+            $(".wind").html("🌬️ 바람: " + windSpeed + " m/s, 풍향 " + windDeg + "°");
+            $(".clouds").html("☁️ 구름량: " + clouds + "%");
+
+            // 날씨 아이콘 & 텍스트
+            $(".weather-icon-container").html(`
+                <img src="${iconUrl}" alt="Weather icon">
+                <div class="weather-text">🌈 ${weatherMain} (${weatherDesc})</div>
+            `);
+        }).fail(function() {
+            alert("날씨 정보를 불러오는 데 실패했습니다.");
+        });
+    });
+    </script>
+</head>
+<body>
+    <h1>🌎 Busan Weather</h1>
+    <h2>📅 - 실시간 날씨</h2>
+    <div class="weather-container">
+        <div class="weather-item city-name"></div>
+        <div class="weather-item weather-icon-container"></div> <!-- 아이콘과 텍스트 한 칸에 정렬 -->
+        <div class="weather-item temp"></div>
+        <div class="weather-item temp-range"></div>
+        <div class="weather-item humidity"></div>
+        <div class="weather-item pressure"></div>
+        <div class="weather-item wind"></div>
+        <div class="weather-item clouds"></div>
+    </div>
+</body>
+</html>

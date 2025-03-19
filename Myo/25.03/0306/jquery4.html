@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<style>
+    h1{width: 200px; text-align: center; border: 1px solid #333; cursor: pointer;}
+    h1.on{background-color: blueviolet; color: #fff;}
+</style>
+<body>
+    <h1>버튼</h1>
+    <script>
+        $(function(){
+            $("h1").click(function(){
+                //$("h1").toggleClass("on");
+                if($(this).hasClass("on")){
+                    $(this).removeClass("on");
+                }else{
+                    $(this).addClass("on");
+                }
+            })
+        })
+    </script>
+</body>
+</html>
